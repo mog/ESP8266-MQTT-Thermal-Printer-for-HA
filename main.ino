@@ -112,11 +112,8 @@ if (strcmp(topic,mqtt_listen_topic_textlineheight)==0){
       printer.printBarcode(barcode_value, (uint8_t) barcode_type);
   } 
 
-
-
-
 // topic to print text
- if (strcmp(topic,mqtt_listen_topic_textsize)==0){
+ if (strcmp(topic,mqtt_listen_topic_text2print)==0){
     printer.print(F("Message arrived:\n"));
     for (int i=0;i<length;i++) {
       printer.print((char)payload[i]);
